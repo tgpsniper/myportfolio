@@ -153,6 +153,9 @@
   .btn:hover{transform:translateY(-1px);box-shadow:var(--lift)}
   .btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule-strong)}
   .btn.ghost:hover{border-color:var(--water);color:var(--water)}
+  /* Download arrow: mono so it matches the &#8599; used on outbound links,
+     and nudged down a hair to sit on the cap line of the label. */
+  .btn .dl{font-family:var(--mono);font-size:13px;display:inline-block;translate:0 1px}
 
   /* portrait plate */
   .plate{margin:0;max-width:296px}
@@ -410,6 +413,8 @@
         </p>
         <div class="hero-actions">
           <a class="btn" href="mailto:avelinolegionjr@gmail.com">Start a conversation</a>
+          <a class="btn ghost" href="Avelino-Legion-Jr-CV.pdf"
+             download="Avelino-Legion-Jr-CV.pdf">Download CV <span class="dl">&#8595;</span></a>
           <a class="btn ghost" href="#platforms">See the work</a>
         </div>
       </div>
@@ -839,7 +844,11 @@
             Open to platform work, GIS and data projects, and LGU automation engagements
             &mdash; on-site in Rizal or remote.
           </p>
-          <a class="btn" href="mailto:avelinolegionjr@gmail.com">avelinolegionjr@gmail.com</a>
+          <div class="hero-actions">
+            <a class="btn" href="mailto:avelinolegionjr@gmail.com">avelinolegionjr@gmail.com</a>
+            <a class="btn ghost" href="Avelino-Legion-Jr-CV.pdf"
+               download="Avelino-Legion-Jr-CV.pdf">Download CV <span class="dl">&#8595;</span></a>
+          </div>
         </div>
         <dl class="lines">
           <div class="line"><dt>Email</dt><dd><a href="mailto:avelinolegionjr@gmail.com">avelinolegionjr@gmail.com</a></dd></div>

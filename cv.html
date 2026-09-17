@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avelino L. Legion Jr. — Curriculum Vitae</title>
+<!--
+  Print source for Avelino-Legion-Jr-CV.pdf.
+
+  Rebuilt from the original ReportLab PDF, keeping its exact design tokens:
+  sidebar #1B2A4A, gold #D4A843, section blue #2C5F8A, role blue #3A5070,
+  italic meta #555555, Gemini highlight #FFF3C4 on #B8860B, and the base-14
+  Helvetica sizes (13pt section heads, 10pt role titles, 8.5pt body).
+  Everything is measured in points so 1 CSS pt == 1 PDF pt.
+
+  Re-render with:
+    chrome --headless=new --disable-gpu --no-pdf-header-footer \
+           --print-to-pdf=Avelino-Legion-Jr-CV.pdf cv.html
+-->
+<style>
+  @page{ size:8.5in 11in; margin:0 }
+
+  html,body{margin:0;padding:0}
+  body{
+    font-family:Helvetica,Arial,sans-serif;
+    color:#2D2D2D;background:#8C9199;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+
+  /* Pages are laid out by hand rather than flowed, so a break never lands
+     mid-role and the navy spine lines up edge to edge on every sheet. */
+  .page{
+    position:relative;width:612pt;height:792pt;margin:0 auto 14pt;
+    background:#fff;overflow:hidden;
+    page-break-after:always;break-after:page;
+  }
+  .page:last-of-type{page-break-after:auto;break-after:auto;margin-bottom:0}
+  @media print{ body{background:#fff} .page{margin:0} }
+
+  /* ---------- navy sidebar ---------- */
+  .side{
+    position:absolute;left:0;top:0;width:200pt;height:792pt;
+    background:#1B2A4A;color:#fff;padding:32pt 20pt 0;box-sizing:border-box;
+  }
+  .nm1{font-size:9pt;font-weight:bold;color:#D4A843;line-height:1;letter-spacing:.2pt}
+  .nm2{font-size:16pt;font-weight:bold;color:#D4A843;line-height:1;margin-top:11pt}
+  .nmsub{font-size:8pt;line-height:1;margin-top:11pt}
+  .side hr{border:0;border-top:.5pt solid #3A6EA5;margin:10pt 0 0}
+  .side h2{
+    font-size:11pt;font-weight:bold;color:#D4A843;line-height:1;
+    margin:20pt 0 0;padding-bottom:4pt;border-bottom:1.5pt solid #D4A843;
+  }
+  .it{font-size:8.5pt;line-height:1.1;margin:8pt 0 0;padding-left:5pt}
+  .it.sm{font-size:7.5pt}
+  .it.b{font-weight:bold;font-size:8pt}
+  .it.gold{color:#D4A843;font-size:8pt}
+  .it.yr{font-size:8pt}
+
+  /* skill meter: five 25pt slots with 3pt gaps, exactly as the original */
+  .skills{margin-top:11pt}
+  .skill{margin-top:4pt;padding-left:5pt}
+  .skill .lbl{font-size:8pt;line-height:8pt}
+  .bars{margin-top:4pt;font-size:0}
+  .bars i{
+    display:inline-block;width:25pt;height:6pt;border-radius:2pt;
+    background:#3A5070;margin-right:3pt;
+  }
+  .bars i:last-child{margin-right:0}
+  .bars i.on{background:#D4A843}
+
+  ul.sb{margin:10pt 0 0;padding:0;list-style:none}
+  ul.sb li{
+    position:relative;font-size:7pt;line-height:9pt;
+    margin-top:4pt;padding-left:10pt;
+  }
+  ul.sb li::before{
+    content:"";position:absolute;left:2pt;top:3.2pt;
+    width:2.4pt;height:2.4pt;border-radius:50%;background:#D4A843;
+  }
+  ul.sb.plat li{font-size:7.5pt;line-height:9pt;color:#D4A843}
+
+  /* ---------- navy header band + main column ---------- */
+  .band{
+    position:absolute;left:200pt;top:0;width:412pt;
+    background:#1B2A4A;color:#fff;padding:0 20pt;box-sizing:border-box;
+  }
+  .band.tall{height:85pt}
+  .band.short{height:50pt}
+  /* Paddings are set so the baselines land where the original PDF put them
+     (40pt, 60pt and 75pt down the 85pt band): with line-height:1 the baseline
+     sits .8465em below the box top for Helvetica/Arial. */
+  .band .bname{font-size:26pt;font-weight:bold;line-height:1;padding-top:18pt}
+  .band .btitle{font-size:12pt;line-height:1;margin-top:6pt;letter-spacing:.2pt}
+  .band .btag{font-size:8.5pt;font-style:italic;line-height:1;margin-top:6pt}
+  .band .bcont{font-size:14pt;font-weight:bold;line-height:1;padding-top:24pt}
+
+  .main{
+    position:absolute;left:200pt;width:412pt;
+    padding:0 20pt;box-sizing:border-box;
+  }
+  .main.after-tall{top:85pt}
+  .main.after-short{top:50pt}
+
+  h3.sec{
+    position:relative;font-size:13pt;font-weight:bold;color:#2C5F8A;
+    line-height:1;margin:23pt 0 0;padding-bottom:5pt;
+  }
+  h3.sec:first-child{margin-top:23pt}
+  h3.sec::after{
+    content:"";position:absolute;left:0;bottom:0;width:80pt;
+    border-bottom:2pt solid #D4A843;
+  }
+
+  p.sum{font-size:8.5pt;line-height:12pt;margin:12pt 0 0}
+  .role{margin-top:19pt}
+  .role .rt{font-size:10pt;font-weight:bold;color:#3A5070;line-height:1}
+  .role .rm{font-size:8pt;font-style:italic;color:#555;line-height:1;margin-top:5pt}
+
+  ul.b{margin:9pt 0 0;padding:0;list-style:none}
+  ul.b li{
+    position:relative;font-size:8.5pt;line-height:12pt;
+    margin-top:2pt;padding-left:12pt;
+  }
+  ul.b li:first-child{margin-top:0}
+  ul.b li::before{
+    content:"";position:absolute;left:2.5pt;top:4.7pt;
+    width:2.6pt;height:2.6pt;border-radius:50%;background:#2D2D2D;
+  }
+  ul.b li b{font-weight:bold}
+
+  /* the yellow run the original uses to pull the eye to the Gemini AI work */
+  .hl{background:#FFF3C4;color:#B8860B;font-weight:bold}
+
+  .foot{
+    position:absolute;left:200pt;bottom:0;width:412pt;height:35pt;
+    background:#EEEEEE;color:#555;font-size:8pt;font-style:italic;
+    text-align:center;line-height:35pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 ===================== -->
+<div class="page">
+  <aside class="side">
+    <div class="nm1">AVELINO L.</div>
+    <div class="nm2">LEGION JR.</div>
+    <div class="nmsub">Software Developer | Data Analyst</div>
+    <hr>
+
+    <h2>CONTACT</h2>
+    <p class="it">0998 616 9556</p>
+    <p class="it sm">avelinolegionjr@gmail.com</p>
+    <p class="it sm">tgpsniper.github.io/myportfolio</p>
+    <p class="it">198 Alejo St, Baras, Rizal</p>
+
+    <h2>EDUCATION</h2>
+    <p class="it b">Information &amp; Communication</p>
+    <p class="it b" style="margin-top:5pt">Technology</p>
+    <p class="it yr">Major in Computer Science</p>
+    <p class="it gold">East System Colleges of Rizal</p>
+    <p class="it yr">2008</p>
+
+    <h2>TECHNICAL SKILLS</h2>
+    <div class="skills">
+      <div class="skill"><div class="lbl">Python</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="skill"><div class="lbl">Django / Flask</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="skill"><div class="lbl">React JS (Vite)</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="skill"><div class="lbl">C# .NET / ASP.NET</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="skill"><div class="lbl">PHP</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="skill"><div class="lbl">JavaScript / Node.js</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="skill"><div class="lbl">Flutter (Mobile Dev)</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="skill"><div class="lbl">MySQL / PostgreSQL</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="skill"><div class="lbl">QGIS / GIS Mapping</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="skill"><div class="lbl">Data Analysis</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="skill"><div class="lbl">LGU Automation</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+    </div>
+
+    <h2>LANGUAGES</h2>
+    <div class="skills">
+      <div class="skill"><div class="lbl">Filipino (Native)</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="skill"><div class="lbl">English (Proficient)</div>
+        <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+    </div>
+  </aside>
+
+  <div class="band tall">
+    <div class="bname">AVELINO L. LEGION JR.</div>
+    <div class="btitle">SOFTWARE DEVELOPER&nbsp; |&nbsp; DATA ANALYST</div>
+    <div class="btag">15+ Years of Experience in Application Development, GIS &amp; Data Analytics</div>
+  </div>
+
+  <div class="main after-tall">
+    <h3 class="sec">PROFESSIONAL SUMMARY</h3>
+    <p class="sum">
+      Results-driven Software Developer and Data Analyst with over 15 years of experience building
+      enterprise applications, ISP platforms, solar energy e-commerce systems, GIS-based government
+      automation solutions, HRMS platforms, and multi-platform streaming services across government
+      and private sectors. Proven track record in leading development teams, designing database
+      architectures, and consulting with LGU stakeholders to streamline operations. Skilled in
+      full-stack development (Python, C#, React JS, Flutter) and statistical data analysis.
+      Currently building web, mobile and TV platforms for J2 Network &amp; Data Solution while
+      contributing as a freelance data analyst supporting Google&rsquo;s Gemini AI on Upwork.
+    </p>
+
+    <h3 class="sec">PROFESSIONAL EXPERIENCE</h3>
+
+    <div class="role">
+      <div class="rt">Freelance Data Analyst &mdash; Gemini AI Support</div>
+      <div class="rm">Upwork / Google Teraneuro Project (Gemini AI Data)&nbsp; |&nbsp; January 2020 - Present</div>
+      <ul class="b">
+        <li>Serve as a dedicated data analyst for the Google Teraneuro Project, collecting, cleaning,
+            and organizing large-scale training datasets that directly support Google&rsquo;s
+            <span class="hl">Gemini AI</span> large language models, ensuring data quality,
+            consistency, and accuracy across all deliverables.</li>
+        <li>Perform in-depth statistical analysis and generate comprehensive reports to improve
+            <span class="hl">Gemini AI</span> data pipelines; conduct rigorous data audits using
+            multi-source triangulation methodologies to validate data reliability and identify
+            discrepancies.</li>
+        <li>Design, build, and maintain relational database systems (MySQL, PostgreSQL) that feed
+            directly into <span class="hl">Gemini AI</span> training and fine-tuning workflows;
+            execute complex data merges, splits, exclusions, and transformation edits to maintain
+            data integrity at scale.</li>
+        <li>Evaluate and annotate AI-generated outputs across multiple content domains to enhance
+            <span class="hl">Gemini AI</span> response quality, contributing to reinforcement
+            learning from human feedback (RLHF) and model fine-tuning processes.</li>
+        <li>Consistently maintain a high Job Success Score on Upwork by delivering quality results
+            ahead of deadlines, managing multiple concurrent data tasks, and maintaining clear
+            communication with Google&rsquo;s project coordinators.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="rt">Software Developer / Systems Architect</div>
+      <div class="rm">J2 Network &amp; Data Solution&nbsp; |&nbsp; Current</div>
+      <ul class="b">
+        <li>Designed and developed the full-stack web platform for J2 Network (j2network.com.ph), a
+            fiber internet service provider rapidly expanding across Bataan, Pampanga, and Batangas,
+            implementing features including online service applications, real-time coverage area
+            mapping, plan management, and a self-service client portal for subscribers.</li>
+        <li>Built and deployed the NetFactory (netfactory.com.ph) ISP platform serving Pampanga,
+            featuring a complete subscriber management system, online connection application
+            workflow, automated billing cycles, and an integrated client portal for account
+            management and support ticketing, backed by an operations console and a GIS plant map
+            tracking fiber routes, NAPs, closures, and service drops against live subscriber status.</li>
+        <li>Developed J2 Solar (j2solar.com.ph), a full-featured e-commerce and product catalog
+            platform for solar inverter sales, showcasing authorized brands (DEYE, Growatt, SolaX,
+            Sungrow, LuxPower, Dongjing), with product filtering, quote request system, and lead
+            management for residential, commercial, and industrial solar projects.</li>
+        <li>Built the HRMS Workspace (hrms.workspace.com.ph) platform, a cloud-based Human Resource
+            Management System featuring employee records management, payroll processing, attendance
+            and leave tracking, performance evaluation, and role-based access control for
+            multi-tenant organizational use.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 2 ===================== -->
+<div class="page">
+  <aside class="side">
+    <div class="nm1">AVELINO L.</div>
+    <div class="nm2">LEGION JR.</div>
+    <div class="nmsub">Software Developer | Data Analyst</div>
+    <hr>
+
+    <h2>SYSTEMS DEVELOPED</h2>
+    <ul class="sb">
+      <li>CLPMS (Central Local Payments Management System)</li>
+      <li>General Accounting Automation System</li>
+      <li>Real Property Tax Management System</li>
+      <li>HR Management System</li>
+      <li>Water Billing System</li>
+      <li>Business Licensing &amp; Permits Issuance System</li>
+      <li>Tricycle Franchise Management System</li>
+      <li>Municipal Civil Registry Certificates System</li>
+      <li>GIS Mapping &amp; Environmental Profiling Module</li>
+      <li>Infrastructure Projects Monitoring System</li>
+      <li>Local Budget Office Automation System</li>
+    </ul>
+
+    <h2>PLATFORMS BUILT</h2>
+    <ul class="sb plat">
+      <li>J2 Network - j2network.com.ph</li>
+      <li>NetFactory - netfactory.com.ph</li>
+      <li>J2 Solar - j2solar.com.ph</li>
+      <li>HRMS - hrms.workspace.com.ph</li>
+      <li>Orpheus - orpheuspinoy.com</li>
+    </ul>
+  </aside>
+
+  <div class="band short">
+    <div class="bcont">PROFESSIONAL EXPERIENCE (CONTINUED)</div>
+  </div>
+
+  <div class="main after-short">
+    <div class="role" style="margin-top:22pt">
+      <div class="rt">Software Developer / Systems Architect (continued)</div>
+      <div class="rm">J2 Network &amp; Data Solution&nbsp; |&nbsp; Current</div>
+      <ul class="b">
+        <li>Developed Orpheus (orpheuspinoy.com), a multi-platform streaming service combining music
+            and video in a single library &mdash; playlists, automix, and radio alongside live TV
+            channels, movies, and series aggregated from Spotify, YouTube, Mixcloud, and M3U sources
+            &mdash; shipped as an installable progressive web app with matching Android phone and
+            Android TV builds, the TV client switching to a three-pane layout built for
+            remote-control navigation.</li>
+        <li>Developed automated billing and subscriber management systems with real-time network
+            monitoring dashboards, service plan configuration tools, and installation package
+            selection workflows for seamless customer onboarding across multiple ISP service
+            regions.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="rt">Project Team Leader / Senior Application System Developer</div>
+      <div class="rm">Swinnerton Staten Solutions, Inc. (SSSI) - Quezon City&nbsp; |&nbsp; January 2010 - December 2019</div>
+      <ul class="b">
+        <li>Lead developer for the GIS-based LGU Total Automation Project, architecting and building
+            an integrated suite of enterprise systems including the Central Local Payments Management
+            System (CLPMS), General Accounting Automation System, Real Property Tax Management
+            System, Human Resource Management System, and Local Budget Office Automation System
+            &mdash; all designed to digitize and streamline core municipal government operations.</li>
+        <li>Developed the Comprehensive GIS Mapping and Environmental Profiling Solutions Module
+            using Quantum GIS and PostgreSQL, integrating Quickbird satellite imagery, Bureau of
+            Lands cadastral data, NAMRIA topographic mapping, and Bureau of Soils data to produce
+            thematic maps (elevation, slope, soil, geologic, land cover, geo-hazard, zoning) for LGU
+            planning and development.</li>
+        <li>Built and deployed the Business Licensing and Permits Issuance System, Tricycle Franchise
+            Management System, Municipal Civil Registry Certificates System, Water Billing and
+            Administration System, and Infrastructure Projects Monitoring System across the
+            municipalities of Baras, Pililla, Jalajala (Rizal) and Pulilan (Bulacan).</li>
+        <li>Reporting directly to the President and CEO, providing on-site operations updates,
+            strategic recommendations, and technical presentations to LGU heads (Mayors, department
+            heads) on automation adoption, development planning, and system roadmaps.</li>
+        <li>Managed the full software development lifecycle from requirements gathering and database
+            design through coding, testing, deployment, end-user training, and post-deployment
+            support, ensuring seamless adoption across all government offices.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="rt">IT / Technical Consultant</div>
+      <div class="rm">Local Government of Baras, Province of Rizal&nbsp; |&nbsp; November 2011 - December 2015</div>
+      <ul class="b">
+        <li>Provided on-site technical consulting for the Municipality of Baras as part of the
+            Integrated and Fully-Customized Comprehensive GIS-Based Total Automation Facility
+            project, advising municipal officials on system deployment strategy, IT infrastructure
+            requirements, network setup, and hardware specifications.</li>
+        <li>Conducted comprehensive software testing and quality assurance across all deployed
+            modules &mdash; CLPMS, Real Property Information and Assessment Management System, GIS
+            Mapping, Budget Office, and Engineering Permits systems &mdash; ensuring reliable
+            performance for daily government operations.</li>
+        <li>Delivered hands-on training programs for government staff across multiple departments
+            (Treasury, Assessor, Planning, Engineering, Civil Registry), building digital literacy
+            and driving adoption of GIS-integrated automation solutions that replaced manual
+            paper-based workflows.</li>
+        <li>Served as the primary technical liaison between SSSI and the LGU of Baras, coordinating
+            system updates, troubleshooting production issues, and implementing feature enhancements
+            based on user feedback from municipal employees.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 3 ===================== -->
+<div class="page">
+  <aside class="side">
+    <div class="nm1">AVELINO L.</div>
+    <div class="nm2">LEGION JR.</div>
+    <div class="nmsub">Software Developer | Data Analyst</div>
+    <hr>
+
+    <h2>CONTACT</h2>
+    <p class="it">0998 616 9556</p>
+    <p class="it sm">avelinolegionjr@gmail.com</p>
+    <p class="it sm">tgpsniper.github.io/myportfolio</p>
+    <p class="it">198 Alejo St, Baras, Rizal</p>
+
+    <h2>DEPLOYED ACROSS</h2>
+    <ul class="sb">
+      <li>Baras, Rizal &mdash; full automation facility</li>
+      <li>Pililla, Rizal</li>
+      <li>Jalajala, Rizal</li>
+      <li>Pulilan, Bulacan</li>
+      <li>Bataan &middot; Pampanga &middot; Batangas (ISP)</li>
+    </ul>
+  </aside>
+
+  <div class="band short">
+    <div class="bcont">KEY PROJECTS &amp; HIGHLIGHTS</div>
+  </div>
+
+  <div class="main after-short">
+    <ul class="b" style="margin-top:24pt">
+      <li><b>Google Teraneuro / <span class="hl">Gemini AI</span> Project:</b> Managed large-scale
+          data collection, cleaning, annotation, and analysis pipelines that directly support
+          Google&rsquo;s <span class="hl">Gemini AI</span> model training and fine-tuning.</li>
+      <li><b>J2 Network (j2network.com.ph) &amp; NetFactory (netfactory.com.ph) ISP Platforms:</b>
+          Designed and built full-stack web platforms for fiber internet service providers covering
+          Bataan, Pampanga, and Batangas with client portals, subscriber management, and GIS plant
+          mapping.</li>
+      <li><b>J2 Solar (j2solar.com.ph):</b> Built a complete e-commerce platform for solar inverter
+          reselling featuring multi-brand product catalogs, quote request workflows, and lead
+          management for residential to industrial scale projects.</li>
+      <li><b>HRMS Workspace (hrms.workspace.com.ph):</b> Developed a cloud-based Human Resource
+          Management System with employee records, payroll, attendance tracking, leave management,
+          and role-based access control.</li>
+      <li><b>Orpheus (orpheuspinoy.com):</b> Built a multi-platform streaming service delivering
+          live TV, movies, series, music, and radio from aggregated sources, shipped as an
+          installable progressive web app with matching Android phone and Android TV clients.</li>
+      <li><b>SSSI - GIS-Based Total Automation for LGUs of Baras, Pililla, Jalajala (Rizal) and
+          Pulilan (Bulacan):</b> Full computerization of municipal operations including financial
+          management, tax assessment, permitting, and GIS mapping.</li>
+    </ul>
+  </div>
+
+  <div class="foot">References available upon request</div>
+</div>
+
+</body>
+</html>

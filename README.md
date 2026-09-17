@@ -17,6 +17,8 @@ Personal portfolio site for **Avelino L. Legion Jr.** — software developer and
 | `netfactory-site.jpg` | NetFactory public site, 900×425 |
 | `netfactory-crm.jpg` | NetFactory operations console, 900×425 — names, IPs, MAC and revenue redacted |
 | `netfactory-gis.jpg` | NetFactory GIS plant map, 900×425 — subscriber name, account no. and GPS redacted |
+| `cv.html` | Print source for the CV — three hand-laid US Letter pages |
+| `Avelino-Legion-Jr-CV.pdf` | The downloadable CV, rendered from `cv.html` |
 
 ## Running it locally
 
@@ -38,6 +40,24 @@ Open `index.html` in any browser. There is no build step and nothing to install.
   `[data-theme="dark"]` so the in-page toggle wins in either direction. The choice persists in
   `localStorage`.
 - **Responsive** down to ~360px, with `prefers-reduced-motion` respected.
+
+## The CV
+
+`cv.html` is the source of truth; the PDF is a render of it, not a separately
+maintained document. It reproduces the design of the original ReportLab résumé —
+same navy `#1B2A4A` spine, gold `#D4A843`, section blue `#2C5F8A`, and the base-14
+Helvetica sizes — with pages laid out by hand so a break never lands mid-role.
+Everything is measured in points, so 1 CSS pt is 1 PDF pt.
+
+Edit `cv.html`, then re-render:
+
+```
+chrome --headless=new --disable-gpu --no-pdf-header-footer \
+       --print-to-pdf=Avelino-Legion-Jr-CV.pdf cv.html
+```
+
+Chrome keeps the background fills, so no extra print flag is needed. Check the
+result is still three US Letter pages before committing.
 
 ## Deployment
 
