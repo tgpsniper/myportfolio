@@ -14,6 +14,9 @@ Personal portfolio site for **Avelino L. Legion Jr.** — software developer and
 | `orpheus-ui.jpg` | Orpheus interface shot used on the Platforms card, 1200×564 |
 | `hrms-ui.jpg` | HRMS Workspace interface shot, 1200×567 — employee names and emails redacted |
 | `j2solar-ui.jpg` | J2 Solar landing-page shot, 1200×436 |
+| `netfactory-site.jpg` | NetFactory public site, 900×425 |
+| `netfactory-crm.jpg` | NetFactory operations console, 900×425 — names, IPs, MAC and revenue redacted |
+| `netfactory-gis.jpg` | NetFactory GIS plant map, 900×425 — subscriber name, account no. and GPS redacted |
 
 ## Running it locally
 

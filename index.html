@@ -263,6 +263,11 @@
     font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
     color:var(--ink-3);padding:7px 9px;border-top:1px solid var(--rule);
   }
+  /* A platform carrying several shots spans the whole grid, so it doesn't
+     stretch the card it would otherwise share a row with. */
+  .platform.wide{grid-column:1/-1}
+  .shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  @media (max-width:760px){ .shots{grid-template-columns:1fr} }
   /* Marks a shot whose real data has been anonymised, so nobody reads the
      placeholder bars as a rendering fault. */
   .shot .redacted{
@@ -526,7 +531,7 @@
           </div>
         </article>
 
-        <article class="platform">
+        <article class="platform wide">
           <div class="platform-top">
             <div>
               <p class="sector">Fiber ISP &middot; Pampanga</p>
@@ -534,12 +539,37 @@
             </div>
             <a class="domain" href="https://netfactory.com.ph" target="_blank" rel="noopener">netfactory.com.ph &#8599;</a>
           </div>
+          <div class="shots">
+            <figure class="shot">
+              <img src="netfactory-site.jpg" width="900" height="425" loading="lazy" decoding="async"
+                   alt="NetFactory public site: headline reading Fast. Reliable. Finally Here. over a
+                        dark field, with cards for entry pricing, 99.5% uptime, 135+ barangays covered
+                        and speeds up to 800 Mbps.">
+              <figcaption>Public site &middot; hero</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="netfactory-crm.jpg" width="900" height="425" loading="lazy" decoding="async"
+                   alt="NetFactory operations console: subscriber, ticket and payment counters across
+                        the top, an automatic-restriction panel, daily application and installation
+                        activity, a revenue-by-plan doughnut chart and an audit trail.">
+              <figcaption>Operations console <span class="redacted">data redacted</span></figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="netfactory-gis.jpg" width="900" height="425" loading="lazy" decoding="async"
+                   alt="NetFactory GIS plant map: fibre routes, NAPs and closures plotted over street
+                        mapping, with a network-attachment panel showing upstream OLT, PON and LCP
+                        detail and a layer list of subscriber states and infrastructure counts.">
+              <figcaption>GIS plant map <span class="redacted">data redacted</span></figcaption>
+            </figure>
+          </div>
           <p>
             Subscriber management system with an online connection-application workflow, automated
             billing cycles, and an integrated portal for account management and support ticketing.
+            Behind it runs an operations console and a GIS plant map tracking fibre routes, NAPs,
+            closures and service drops against live subscriber status.
           </p>
           <div class="chips">
-            <span class="chip">Automated billing</span><span class="chip">Ticketing</span><span class="chip">Onboarding workflow</span>
+            <span class="chip">Automated billing</span><span class="chip">Ticketing</span><span class="chip">Onboarding workflow</span><span class="chip">GIS plant map</span>
           </div>
         </article>
 
