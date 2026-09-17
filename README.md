@@ -12,6 +12,7 @@ Personal portfolio site for **Avelino L. Legion Jr.** — software developer and
 | `index.html` | The whole site — markup, styles and script in one file |
 | `portrait.jpg` | Hero portrait, 516×688 |
 | `orpheus-ui.jpg` | Orpheus interface shot used on the Platforms card, 1200×564 |
+| `hrms-ui.jpg` | HRMS Workspace interface shot, 1200×567 — employee names and emails redacted |
 
 ## Running it locally
 

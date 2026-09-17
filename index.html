@@ -263,6 +263,12 @@
     font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
     color:var(--ink-3);padding:7px 9px;border-top:1px solid var(--rule);
   }
+  /* Marks a shot whose real data has been anonymised, so nobody reads the
+     placeholder bars as a rendering fault. */
+  .shot .redacted{
+    color:var(--ink-3);opacity:.75;border-left:1px solid var(--rule);
+    margin-left:7px;padding-left:8px;
+  }
   .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:4px}
   .chip{
     font-family:var(--mono);font-size:11px;letter-spacing:.03em;
@@ -563,6 +569,13 @@
             </div>
             <a class="domain" href="https://hrms.workspace.com.ph" target="_blank" rel="noopener">hrms.workspace.com.ph &#8599;</a>
           </div>
+          <figure class="shot">
+            <img src="hrms-ui.jpg" width="1200" height="567" loading="lazy" decoding="async"
+                 alt="HRMS Workspace employee directory: a table of staff by company, department,
+                      designation, employment type and status, with a sidebar covering recruitment,
+                      attendance, shift scheduling, leave, overtime, performance and payroll.">
+            <figcaption>Admin console &middot; employee directory <span class="redacted">names redacted</span></figcaption>
+          </figure>
           <p>
             Human resource management for multi-tenant organisations: employee records, payroll
             processing, attendance and leave tracking, performance evaluation, and role-based
