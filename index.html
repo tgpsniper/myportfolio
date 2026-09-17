@@ -255,6 +255,14 @@
   }
   .platform .domain:hover{border-bottom-color:currentColor}
   .platform p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
+  /* Interface shot inside a platform card. Framed like the hero portrait plate
+     so a screenshot reads as a plate on the sheet rather than a loose image. */
+  .shot{margin:0;border:1px solid var(--rule);border-radius:2px;background:var(--paper);overflow:hidden}
+  .shot img{display:block;width:100%;height:auto}
+  .shot figcaption{
+    font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--ink-3);padding:7px 9px;border-top:1px solid var(--rule);
+  }
   .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:4px}
   .chip{
     font-family:var(--mono);font-size:11px;letter-spacing:.03em;
@@ -573,6 +581,13 @@
             </div>
             <a class="domain" href="https://orpheuspinoy.com" target="_blank" rel="noopener">orpheuspinoy.com &#8599;</a>
           </div>
+          <figure class="shot">
+            <img src="orpheus-ui.jpg" width="1200" height="564" loading="lazy" decoding="async"
+                 alt="Orpheus web client home screen: two featured titles across the top, rows of
+                      last-added movies and series below, and a sidebar listing Live TV, Live Radio,
+                      Movies, TV Shows, Music and Playlist alongside admin tools.">
+            <figcaption>Web client &middot; home</figcaption>
+          </figure>
           <p>
             Music and video in one library &mdash; playlists, automix and radio alongside live TV
             channels, movies and series, pulling from Spotify, YouTube, Mixcloud and M3U sources.
