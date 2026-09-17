@@ -237,7 +237,11 @@
   }
 
   /* ---------- platforms ---------- */
-  .platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(18px,2.6vw,26px)}
+  /* Fixed two-up rather than auto-fit. With five cards and one spanning the
+     full width, auto-fit flipped between two and three tracks depending on
+     viewport and left a half-empty row either side of the wide card. */
+  .platforms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.6vw,26px)}
+  @media (max-width:720px){ .platforms{grid-template-columns:1fr} }
   .platform{
     background:var(--surface);border:1px solid var(--rule);border-radius:3px;
     padding:24px;display:flex;flex-direction:column;gap:14px;
@@ -513,24 +517,6 @@
       </div>
       <div class="platforms">
 
-        <article class="platform">
-          <div class="platform-top">
-            <div>
-              <p class="sector">Fiber ISP</p>
-              <h3>J2 Network</h3>
-            </div>
-            <a class="domain" href="https://j2network.com.ph" target="_blank" rel="noopener">j2network.com.ph &#8599;</a>
-          </div>
-          <p>
-            Full-stack platform for a fiber internet provider expanding across three provinces:
-            online service applications, real-time coverage-area mapping, plan management and a
-            self-service client portal for subscribers.
-          </p>
-          <div class="chips">
-            <span class="chip">Coverage mapping</span><span class="chip">Client portal</span><span class="chip">Plan management</span>
-          </div>
-        </article>
-
         <article class="platform wide">
           <div class="platform-top">
             <div>
@@ -570,6 +556,24 @@
           </p>
           <div class="chips">
             <span class="chip">Automated billing</span><span class="chip">Ticketing</span><span class="chip">Onboarding workflow</span><span class="chip">GIS plant map</span>
+          </div>
+        </article>
+
+        <article class="platform">
+          <div class="platform-top">
+            <div>
+              <p class="sector">Fiber ISP</p>
+              <h3>J2 Network</h3>
+            </div>
+            <a class="domain" href="https://j2network.com.ph" target="_blank" rel="noopener">j2network.com.ph &#8599;</a>
+          </div>
+          <p>
+            Full-stack platform for a fiber internet provider expanding across three provinces:
+            online service applications, real-time coverage-area mapping, plan management and a
+            self-service client portal for subscribers.
+          </p>
+          <div class="chips">
+            <span class="chip">Coverage mapping</span><span class="chip">Client portal</span><span class="chip">Plan management</span>
           </div>
         </article>
 
