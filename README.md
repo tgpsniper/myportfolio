@@ -33,7 +33,8 @@ Open `index.html` in any browser. There is no build step and nothing to install.
   `localStorage`.
 - **Responsive** down to ~360px, with `prefers-reduced-motion` respected.
 
-## Deploying to GitHub Pages
+## Deployment
 
-Settings → Pages → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)` → Save.
-The site goes live at the URL above within a minute or two.
+Publishing is automatic. `.github/workflows/deploy-pages.yml` runs on every push to `main`,
+enables Pages if it isn't already on, and deploys the repo root. The site is live at the URL
+above a minute or two after a push — no manual step, no branch to keep in sync.
